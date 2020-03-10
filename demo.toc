@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Basic Elements}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Elements Good for Presentation}{6}{0}{1}
+\beamer@subsectionintoc {1}{2}{Overlay Animation}{7}{0}{1}
+\beamer@sectionintoc {2}{Math Equations}{9}{0}{2}
+\beamer@subsectionintoc {2}{1}{Baum-Welch Algorithm}{10}{0}{2}
+\beamer@sectionintoc {3}{And This Is Simply a Test to See Whether a Very Long Section Name Looks Good in the Footline}{12}{0}{3}

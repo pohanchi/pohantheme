@@ -1,0 +1,176 @@
+\ProvidesPackage{beamerthemepohan}
+
+% \usepackage{xifthen} % provides \isempty
+% % \usepackage{eulervm} % for nice-looking math letters
+% \usepackage{concmath} % for nice-looking math letters
+% \usepackage[sfdefault]{sourcesanspro}
+% \usepackage[ttdefault]{sourcecodepro}
+% \usepackage[rmdefault]{sourceserifpro}
+% \usepackage[T1]{fontenc}
+\usepackage[default]{cantarell} %% Use option "defaultsans" to use cantarell as sans serif only
+\usepackage[T1]{fontenc}
+
+% \setlength{\parindent}{0pt}
+% \setlength{\parskip}{1ex}
+
+\mode<presentation>
+
+  \usetheme{Boadilla}
+  \usecolortheme{beaver}
+  \usefonttheme{professionalfonts}
+
+  % define the left and right margin of text
+  \setbeamersize{text margin left=.06\paperwidth, text margin right=.06\paperwidth}
+
+  % % define fonts
+  % \setbeamerfont{author}{series=\bfseries\rmfamily\upshape}
+  % \setbeamerfont{date}{series=\bfseries\rmfamily\itshape}
+  % \setbeamerfont{author in head/foot}{series=\rmfamily\upshape}
+  % \setbeamerfont{section in head/foot}{}
+  % \setbeamerfont{number in head/foot}{}
+  \setbeamerfont{title}{series=\bfseries}
+
+  % % define colors
+  \definecolor{Dark}{HTML}{5e5656}
+  \definecolor{Light}{HTML}{ffffff}
+  \colorlet{Grey}{Dark!95!}
+  \definecolor{Primary}{HTML}{2a4d69}
+  \definecolor{Secondary}{HTML}{4b86b4}
+  \definecolor{Tertiary}{HTML}{adcbe3}
+  \definecolor{Quaternary}{HTML}{e7eff6}
+  \definecolor{Quinary}{HTML}{63ace5}
+  \definecolor{5color}{HTML}{13293d}
+
+  % % define template colors
+  \setbeamercolor{background canvas}{bg=Quaternary}
+  \setbeamercolor{frametitle}{fg=Light,bg=Primary}
+  \setbeamercolor{block title}{fg=Primary, bg=Primary!25}
+  \setbeamercolor{block title alerted}{fg=Quaternary!10, bg=5color!80}
+  \setbeamercolor{block title example}{fg=Secondary!120, bg=Secondary!35}
+  \setbeamercolor{block body}{bg=Light}
+  \setbeamercolor{block body alerted}{bg=Light}
+  \setbeamercolor{block body example}{bg=Light}
+  \setbeamercolor{normal text}{fg=Dark}
+  \setbeamercolor{alerted text}{fg=Dark!95}
+  \setbeamercolor{example text}{fg=Secondary}
+  \setbeamercolor{title}{fg=Primary,bg=Tertiary}
+  \setbeamercolor{subtitle}{fg=Dark}
+  \setbeamercolor{author}{fg=Dark}
+  \setbeamercolor{date}{fg=Dark}
+  \setbeamercolor{author in head/foot}{fg=Secondary, bg=Tertiary}
+  \setbeamercolor{section in head/foot}{fg=Tertiary!10, bg=Secondary}
+  \setbeamercolor{number in head/foot}{fg=Secondary, bg=Tertiary}
+  \setbeamercolor{itemize item}{fg=Secondary}
+  \setbeamercolor{itemize subitem}{fg=Secondary}
+  \setbeamercolor{itemize subsubitem}{fg=Secondary}
+  \setbeamercolor{enumerate item}{fg=Secondary}
+  \setbeamercolor{enumerate subitem}{fg=Secondary}
+  \setbeamercolor{enumerate subsubitem}{fg=Secondary}
+  \setbeamercolor{description item}{fg=Secondary}
+  \setbeamercolor{caption name}{fg=Secondary}
+  \setbeamercolor{section in toc}{fg=Dark}
+  \setbeamercolor{subsection in toc}{fg=Primary}
+  \setbeamercolor{math text}{fg=Primary!120}
+
+  % % dim the animated text
+  \setbeamercovered{transparent}
+
+  % redefine title page
+  % \setbeamertemplate{title page}{%
+  %   \centering
+  %   \vfill
+  %   {\usebeamerfont{title}\usebeamercolor[fg]{title}\LARGE\inserttitle}\par%
+  %   \ifthenelse{\isempty{\insertsubtitle}}{
+  %     \relax
+  %   }{
+  %     \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par%
+  %   }
+  %   \vspace{20pt}
+  %   \usebeamerfont{author}\usebeamercolor[fg]{author}\insertauthor\par%
+  %   \ifthenelse{\isempty{\insertinstitute}}{
+  %     \relax
+  %   }{
+  %     \usebeamerfont{institute}\insertinstitute\par%
+  %   }
+  %   {\usebeamerfont{date}\usebeamercolor[fg]{date}\footnotesize\insertdate}\par%
+  % }
+
+  % define footline
+  \setbeamertemplate{footline}{%
+    \hbox{%
+      \begin{beamercolorbox}[wd=.1\paperwidth,ht=3ex,dp=1.75ex,center]{author in head/foot}
+        \insertauthor
+      \end{beamercolorbox}%
+      \begin{beamercolorbox}[wd=.8\paperwidth,ht=3ex,dp=1.75ex,center]{section in head/foot}
+        \insertsection
+      \end{beamercolorbox}%
+      \begin{beamercolorbox}[wd=.1\paperwidth,ht=3ex,dp=1.75ex,center]{number in head/foot}
+        \insertframenumber\ /\ \inserttotalframenumber
+      \end{beamercolorbox}%
+    }
+  }
+
+  % remove navi symbols
+  \setbeamertemplate{navigation symbols}{}
+
+  % use rounded blocks with shadow
+  \setbeamertemplate{blocks}[rounded][shadow=true]
+
+  \setbeamertemplate{section in toc}{
+    \inserttocsectionnumber. \inserttocsection%
+  }
+  \setbeamertemplate{subsection in toc}{
+    \quad\inserttocsectionnumber.\inserttocsubsectionnumber. \inserttocsubsection\par%
+  }
+
+  % redefine itemize items
+  \setbeamertemplate{itemize item}{
+    \normalsize\raise1pt\hbox{\donotcoloroutermaths$\bullet$}
+  }
+  \setbeamertemplate{itemize subitem}{
+    \scriptsize\raise1.5pt\hbox{\donotcoloroutermaths$\blacktriangleright$}
+  }
+  \setbeamertemplate{itemize subsubitem}{
+    \tiny\raise0.4pt\hbox{\donotcoloroutermaths$\blacksquare$}
+  }
+
+  % redefine enumerate items
+  \setbeamertemplate{enumerate item}{\arabic{enumi}.}
+  \setbeamertemplate{enumerate subitem}{\alph{enumii}.}
+  \setbeamertemplate{enumerate subsubitem}{\roman{enumiii}.}
+
+  % % insert section head frame
+  % \AtBeginSection[]{
+  %   \begin{frame}[plain,noframenumbering]
+  %     \vfill
+  %     \centering
+  %     \usebeamerfont{title}\usebeamercolor[fg]{title}\insertsectionhead\par
+  %     \vfill
+  %   \end{frame}
+  % }
+  % \AtBeginSubsection[]{
+  %   \begin{frame}[plain,noframenumbering]
+  %     \vfill
+  %     \centering
+  %     \usebeamerfont{title}\usebeamercolor[fg]{title}\insertsubsectionhead\par%
+  %     \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsectionhead\par%
+  %     \vfill
+  %   \end{frame}
+  % }
+
+  % % remove frame numbering from title page
+  % \renewcommand{\maketitle}{
+  %   \begin{frame}[plain,noframenumbering]
+  %     \titlepage
+  %   \end{frame}
+  % }
+
+  % create table of contents template
+  \newcommand{\maketoc}{
+    \begin{frame}[plain,noframenumbering]
+      \frametitle{Outline}
+      \tableofcontents
+    \end{frame}
+  }
+
+\mode<all>
