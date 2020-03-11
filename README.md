@@ -1,4 +1,5 @@
-# frozen theme
-beamer theme
+## frozen theme
+
+### <center> beamer theme
 
 ![](demo.png)
